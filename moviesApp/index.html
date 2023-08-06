@@ -7,31 +7,51 @@
 </head>
 <body>
 <!-- contains a form wiht two inputs for a title and rating along with a button to submit the form -->
+<div class = "main-heading text-center">
 <h1>Movie Ratings App</h1>
-<form>
-    <label>Movie Title</label>
-    <input type="text" required id="Movie Title">  
     <!-- title -->
-    
-    <lable>Rating</lable>
-    <input type="number" required id="Rating">
-    <!-- rating -->
+<form class="form-inline justify-content-center"
+id="movie-form">
+    <div class="form-group">
+        <label for ="title">Title
+        <input type="text" required id="title"
+        class="form-control mx-sm-3">
+    </div> 
 
-    <button type="submit">Submit</button>
+    <!-- rating -->    
+    <div class="form-group">
+            <label for="rating">Rating
+            <input type="number"
+            required min="0" max="10"
+            id="rating"
+            class="form-control mx-sm-3">
+    </div>
+
+
+    <div class = "form-group">
+        <button type ="submit"
+        class = "btn btn-primary
+        form-control mx-sm-3">Submit</button>
+    </div>
+
 </form>
+</div>
 <br>
 
 <!-- Insert the table of movie listings -->
     <table>
-        <thead>
+        <thead class="thead-light">
             <h2>Movie Listing with Ratings</h2>
-        </thead>
             <tr>
-                <th scope="col">Title</th>
-                <th scope ='col'>Rating</th>
-                <th scope = "col">Remove Movie</th>
+                <th scope="col">Title <i id= "title" class= "fas fa-sort-down"></i></th>
+                
+                <th scope ='col'>Rating <i id="rating" class="fas fa-sort-down"></i></th>
+                
+                <th scope = "col">Remove Movie</i></th>
             </tr>
-        <tbody> 
+        </thead>
+
+        <tbody id="movie-listing-body"> 
 
         </tbody>
     </table>
